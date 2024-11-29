@@ -1,0 +1,12 @@
+---
+export interface ButtonProps {
+  route: string;
+  title: string;
+}
+
+const { route, title } = Astro.props;
+---
+
+<button class="rounded-[4px] bg-green-500 py-3 px-4 text-white font-bold text-nowrap hover:bg-green-600 transition-all">
+    <a href={route}>{title}</a>
+</button>
