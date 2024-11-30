@@ -18,40 +18,37 @@ interface HeaderButtonProps {
 const HeaderButton = ({ title }: HeaderButtonProps) => {
   const { toast } = useToast();
 
-  const handleSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmitForm = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          toast({
-            title: "Ocorreu um erro ao enviar a mensagem.",
-            description: "Verifique os campos e tente novamente.",
-            className: "bg-red-500 text-white",
-          });
-          throw new Error("Ocorreu um erro ao enviar a mensagem.");
-        }
-        toast({
-          title: "Sua mensagem foi enviada com sucesso!",
-          description: "Entraremos em contato em breve.",
-          className: "bg-green-500 text-white",
-        });
-        form.reset();
-      })
-      .catch(() => {
-        toast({
-          title: "Ocorreu um erro ao enviar a mensagem.",
-          description: "Verifique os campos e tente novamente.",
-          className: "bg-red-500 text-white",
-        });
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
       });
+
+      if (!response.ok) {
+        throw new Error("Ocorreu um erro ao enviar a mensagem.");
+      }
+
+      toast({
+        title: "Sua mensagem foi enviada com sucesso!",
+        description: "Entraremos em contato em breve.",
+        className: "bg-green-500 text-white",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Ocorreu um erro ao enviar a mensagem.",
+        description: "Verifique os campos e tente novamente.",
+        className: "bg-red-500 text-white",
+      });
+    }
   };
   return (
     <div>
