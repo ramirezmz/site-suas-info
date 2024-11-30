@@ -1,16 +1,18 @@
 ---
-import Banner from '@/components/Banner.astro';
-import Info from '@/components/Info.astro';
-import Layout from '../layouts/Layout.astro';
-import ReasonsWhy from '@/components/ReasonsWhy.tsx';
-import Depoiments from '@/components/Depoiments.tsx';
+import Banner from "@/components/Banner.astro";
+import Info from "@/components/Info.astro";
+import Layout from "../layouts/Layout.astro";
+import ReasonsWhy from "@/components/ReasonsWhy.tsx";
+import Depoiments from "@/components/Depoiments.tsx";
+
+import "@/styles/globals.css";
 ---
 
 <Layout>
-	<Banner />
-	<span>municípos com quem cocriamos</span>
-	<Info />
-	<ReasonsWhy />
-	<span>municípos com quem cocriamos</span>
-	<Depoiments	/>
+  <Banner />
+  <span>municípos com quem cocriamos</span>
+  <Info />
+  <!-- <ReasonsWhy client:only /> -->
+  <span>municípos com quem cocriamos</span>
+  <!-- <Depoiments client:only /> -->
 </Layout>
