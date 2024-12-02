@@ -10,7 +10,6 @@ import {
 } from "./ui/dialog";
 import WhatsApp_icon from "../assets/WhatsApp_icon.png?url";
 import { useToast } from "@/hooks/use-toast";
-import suas_info from "../assets/suas_info.png?url";
 
 interface HeaderButtonProps {
   title: string;
@@ -55,9 +54,9 @@ const HeaderButton = ({ title }: HeaderButtonProps) => {
     <div>
       <Dialog>
         <DialogTrigger asChild>
-          <button className="rounded-[4px] bg-[#62934a] text-white font-semibold px-6 py-2 hover:bg-[#537c3e] transition-all flex items-center h-11 max-h-11 text-nowrap gap-1">
+          <button className="rounded-[4px] bg-green-500 text-white font-semibold px-6 py-2 hover:bg-green-600 transition-all flex items-center h-11 max-h-11 text-nowrap">
             <span>{title}</span>
-            <ArrowRight size={20} />
+            <ArrowRight size={32} />
           </button>
         </DialogTrigger>
         <DialogContent>
@@ -66,12 +65,7 @@ const HeaderButton = ({ title }: HeaderButtonProps) => {
               Solicite uma demostração
             </DialogTitle>
             <DialogDescription className="ml-auto">
-              <img
-                src={suas_info}
-                alt="Suas Info Logo"
-                width={150}
-                height={50}
-              />
+              <img src="" alt="Suas Info Logo" />
             </DialogDescription>
           </DialogHeader>
 
@@ -81,7 +75,7 @@ const HeaderButton = ({ title }: HeaderButtonProps) => {
             onSubmit={handleSubmitForm}
           >
             <div className="flex flex-col gap-5">
-              <label className="grid gap-1 font-semibold">
+              <label className="grid gap-1">
                 Nome*:
                 <input
                   className="border border-gray-600 rounded-sm p-1"
@@ -91,7 +85,7 @@ const HeaderButton = ({ title }: HeaderButtonProps) => {
                   placeholder="Seu nome ou nome da empresa"
                 />
               </label>
-              <label className="grid gap-1 font-semibold">
+              <label className="grid gap-1">
                 Email*:
                 <input
                   className="border border-gray-600 rounded-sm p-1"
@@ -101,7 +95,7 @@ const HeaderButton = ({ title }: HeaderButtonProps) => {
                   placeholder="seuemail@exemplo.com"
                 />
               </label>
-              <label className="grid gap-1 font-semibold">
+              <label className="grid gap-1">
                 Telefone*:
                 <input
                   className="border border-gray-600 rounded-sm p-1"
@@ -122,14 +116,14 @@ const HeaderButton = ({ title }: HeaderButtonProps) => {
             <DialogClose asChild>
               <button
                 type="submit"
-                className=" rounded-sm w-full bg-[#17427b] text-white font-semibold px-6 py-2 hover:bg-[#163761] transition-all mt-5"
+                className=" rounded-sm w-full bg-blue-500 text-white font-semibold px-6 py-2 hover:bg-blue-600 transition-all mt-5"
               >
                 Enviar
               </button>
             </DialogClose>
             <button
               type="button"
-              className="w-full border border-gray-950 rounded-sm font-semibold px-6 py-2 hover:border-blue-600 hover:text-white hover:bg-[#17427b] transition-all mt-2"
+              className="w-full border border-gray-950 rounded-sm font-semibold px-6 py-2 hover:border-blue-600 hover:text-white hover:bg-blue-600 transition-all mt-2"
             >
               <a
                 href="https://wa.me/5522998052982?text=Olá!%20Quero%20agendar%20uma%20demonstração%20do%20Suas.Info!"
