@@ -11,6 +11,7 @@ import {
 import WhatsApp_icon from "../assets/WhatsApp_icon.png?url";
 import { useToast } from "@/hooks/use-toast";
 import suas_info from "../assets/suas_info.png?url";
+import { Button } from "./ui/button";
 
 interface HeaderButtonProps {
   title: string;
@@ -55,10 +56,13 @@ const HeaderButton = ({ title }: HeaderButtonProps) => {
     <div>
       <Dialog>
         <DialogTrigger asChild>
-          <button className="rounded-[4px] bg-[#62934a] text-white font-semibold px-6 py-2 hover:bg-[#537c3e] transition-all flex items-center h-11 max-h-11 text-nowrap gap-1">
+          <Button
+            variant={"secondary"}
+            className="flex items-center max-h-10 text-nowrap gap-1"
+          >
             <span>{title}</span>
             <ArrowRight size={32} />
-          </button>
+          </Button>
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>
@@ -120,16 +124,18 @@ const HeaderButton = ({ title }: HeaderButtonProps) => {
             </div>
 
             <DialogClose asChild>
-              <button
+              <Button
                 type="submit"
-                className=" rounded-sm w-full bg-[#17427b] text-white font-semibold px-6 py-2 hover:bg-[#163761] transition-all mt-5"
+                className="w-full px-6 py-2 mt-5"
+                variant={"default"}
               >
                 Enviar
-              </button>
+              </Button>
             </DialogClose>
-            <button
+            <Button
               type="button"
-              className="w-full border border-gray-950 rounded-sm font-semibold px-6 py-2 hover:border-blue-600 hover:text-white hover:bg-[#17427b] transition-all mt-2"
+              className="w-full px-6 py-2 mt-2"
+              variant={"outline"}
             >
               <a
                 href="https://wa.me/5522998052982?text=Olá!%20Quero%20agendar%20uma%20demonstração%20do%20Suas.Info!"
@@ -144,7 +150,7 @@ const HeaderButton = ({ title }: HeaderButtonProps) => {
                   height={24}
                 />
               </a>
-            </button>
+            </Button>
           </form>
         </DialogContent>
       </Dialog>
