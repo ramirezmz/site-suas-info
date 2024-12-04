@@ -28,7 +28,7 @@ const DepoimentsList = [
 const Depoiments = () => {
   return (
     <div className="bg-gray-400 py-10">
-      <div className="container w-3/4 m-auto space-y-6">
+      <div className="container w-full m-auto space-y-6">
         <h2 className="text-5xl font-medium text-[#333333]">
           Depoimentos de quem confia no nosso trabalho
         </h2>
