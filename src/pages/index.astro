@@ -4,11 +4,10 @@ import Info from "@/components/Info.astro";
 import Layout from "../layouts/Layout.astro";
 import ReasonsWhy from "@/components/ReasonsWhy.tsx";
 import Depoiments from "@/components/Depoiments.tsx";
-
 import "@/styles/globals.css";
-// import Partners from "@/components/Partners";
 import Cities from "@/components/Cities";
 import Partners from "@/components/Partners";
+import VfSoft from "@/components/VfSoft.astro";
 ---
 
 <Layout>
@@ -18,4 +17,5 @@ import Partners from "@/components/Partners";
   <ReasonsWhy client:only />
   <Partners client:only />
   <Depoiments client:only />
+  <VfSoft />
 </Layout>
