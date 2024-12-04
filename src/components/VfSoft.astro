@@ -1,0 +1,56 @@
+---
+import suas_info from '../assets/suas_info.png?url'
+import vf_soft from '../assets/vf_soft.png?url'
+import img1 from '../assets/img1.png?url'
+import img2 from '../assets/img2.png?url'
+import img3 from '../assets/img3.png?url'
+---
+<div class="px-16 py-10">
+    <h2 class="flex items-center justify-center gap-3 text-5xl text-[#17427b] font-semibold">Inovação e Excelência: A História por Trás do <img src={suas_info} /></h2>
+    <div class="flex border-b-4 border-b-[#17427b] h-full py-5">
+        <div class="images sm:mr-28 grid gap-3">
+            <div class="border-r-4 border-r-[#17427b] pr-3">
+                <span class="p-3 mx-auto border-l-4 border-l-[#17427b] w-full flex justify-center -ml-8">
+                    <img src={vf_soft} alt="" class="w-80">
+                </span>
+                <img src={img2} alt="Banner" class="max-w-[500px] h-64" />
+            </div>
+            <div class="flex gap-20 -mt-20">
+              <img src={img3} alt="Banner" class="max-w-56 -ml-10 max-h-52 h-auto" />
+              <img src={img1} alt="Banner" class="max-w-72 -mr-10 max-h-64 h-auto" />
+            </div>
+          </div>
+
+        <div class="border-r-[#17427b] border-r-4 pr-3 space-y-10 text-xl text-justify">
+            <div class="h-auto pl-3 space-y-10 -ml-28">
+                <p>A VFsoft Soluções é uma empresa especializada em tecnologia e desenvolvimento de sistemas, reconhecida por sua seriedade e compromisso em oferecer soluções inovadoras que transformam a gestão pública, em especial  Assistências Sociais. </p>
+                <p>Com uma abordagem estratégica e focada nas necessidades do setor público, a <span class="font-bold">VFsoft</span> criou o <span class="font-bold">Suas.Info</span>, um sistema de gestão completo para prefeituras, que visa modernizar e otimizar a gestão da assistência social. Nosso compromisso é proporcionar eficiência, transparência e inteligência aos processos administrativos, assegurando que cada município tenha o suporte necessário para atender com excelência sua população.</p>
+            </div>
+                <div class="-ml-10 space-y-10">
+                    <p>
+                        A VFsoft entende a importância da tecnologia para melhorar os serviços públicos e, por isso, investe constantemente em inovação e qualidade, sempre alinhada às melhores práticas de mercado. Nossa equipe de especialistas está comprometida em entregar soluções que façam a diferença, transformando desafios em resultados concretos e promovendo um futuro mais eficiente e sustentável para as prefeituras e os cidadãos.
+                    </p>
+                    <p>
+                        Com a VFsoft Soluções, sua administração pública ganha mais agilidade, controle e transparência, garantindo a qualidade nos serviços de assistência social e contribuindo para o bem-estar da comunidade.
+                    </p>
+                </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  
+    .images img {
+      animation: slideIn 1s ease-in-out;
+    }
+  </style>

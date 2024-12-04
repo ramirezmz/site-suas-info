@@ -23,7 +23,7 @@ const CitiesList = [
 
 const Cities = () => {
   return (
-    <div className="grid my-20">
+    <div className="grid mt-10 mb-20">
       <h2 className="text-2xl text-[#3b3a3a] grid items-center gap-3 pl-16 pb-5">
         <span className="border border-black w-44"></span>
         Municípios com quem cocriamos

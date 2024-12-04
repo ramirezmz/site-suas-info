@@ -1,23 +1,13 @@
-import { ArrowRight } from "lucide-react";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "./ui/dialog";
-import WhatsApp_icon from "../assets/WhatsApp_icon.png?url";
 import { useToast } from "@/hooks/use-toast";
 import suas_info from "../assets/suas_info.png?url";
+import vf_soft from "../assets/vf_soft.png?url";
+import WhatsApp_icon from "../assets/WhatsApp_icon.png?url";
+import whatsapp from "../assets/whatsapp.svg?url";
+import web_icon from "../assets/web_icon.jpg?url";
+import email_icon from "../assets/email_icon.jpg?url";
 import { Button } from "./ui/button";
 
-interface HeaderButtonProps {
-  title: string;
-}
-
-const HeaderButton = ({ title }: HeaderButtonProps) => {
+const Contact = () => {
   const { toast } = useToast();
 
   const handleSubmitForm = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -53,32 +43,31 @@ const HeaderButton = ({ title }: HeaderButtonProps) => {
     }
   };
   return (
-    <div>
-      <Dialog>
-        <DialogTrigger asChild>
-          <Button
-            variant={"secondary"}
-            className="flex items-center max-h-10 text-nowrap gap-1"
-          >
-            <span>{title}</span>
-            <ArrowRight size={32} />
-          </Button>
-        </DialogTrigger>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle className="text-2xl">
-              Solicite uma demostração
-            </DialogTitle>
-            <DialogDescription className="ml-auto">
-              <img
-                src={suas_info}
-                alt="Suas Info Logo"
-                width={150}
-                height={50}
-              />
-            </DialogDescription>
-          </DialogHeader>
-
+    <div className="flex justify-between px-20 pt-6 pb-10">
+      <div className="images flex flex-col w-1/2 justify-center gap-5">
+        <h2 className="text-3xl mb-5">Entre em Contato</h2>
+        <div className="flex flex-col justify-center items-center">
+          <img src={suas_info} alt="" className="w-96" />
+          <img src={vf_soft} alt="" className="w-64" />
+        </div>
+        <div className="grid gap-2">
+          <span className="flex items-center gap-2">
+            <img src={whatsapp} alt="WhatsApp" width={24} height={24} />
+            <span className="font-extralight">41 9 9823 8165</span>
+          </span>
+          <span className="flex items-center gap-2">
+            <img src={email_icon} alt="Email" width={24} height={24} />
+            <span className="font-extralight">suas.info@.com.br</span>
+          </span>
+          <span className="flex items-center gap-2">
+            <img src={web_icon} alt="Site" width={24} height={24} />
+            <span className="font-extralight">www.suas.info.com.br</span>
+          </span>
+        </div>
+      </div>
+      <div className="form  w-1/2">
+        <div className="bg-[#c5c6d2] max-w-lg m-auto p-10 rounded-md grid gap-5">
+          <p className="text-xl font-bold">Solicite o nosso contato</p>
           <form
             method="POST"
             action="https://formspree.io/f/mnnqollz"
@@ -122,40 +111,32 @@ const HeaderButton = ({ title }: HeaderButtonProps) => {
                 value="Quero uma demonstração do Suas.Info"
               />
             </div>
-
-            <DialogClose asChild>
-              <Button
-                type="submit"
-                className="w-full px-6 py-2 mt-5"
-                variant={"default"}
-              >
+            <div>
+              <Button type="submit" className="w-full mt-5" variant={"default"}>
                 Enviar
               </Button>
-            </DialogClose>
-            <Button
-              type="button"
-              className="w-full px-6 py-2 mt-2"
-              variant={"outline"}
-            >
-              <a
-                href="https://wa.me/5522998052982?text=Olá!%20Quero%20agendar%20uma%20demonstração%20do%20Suas.Info!"
-                target="_blank"
-                className="flex justify-center items-center gap-2"
-              >
-                Ir para o Whatsapp
-                <img
-                  src={WhatsApp_icon}
-                  alt="WhatsApp Icon"
-                  width={24}
-                  height={24}
-                />
-              </a>
-            </Button>
+
+              <Button type="button" className="w-full mt-2" variant={"outline"}>
+                <a
+                  href="https://wa.me/41998238165?text=Olá!%20Quero%20agendar%20uma%20demonstração%20do%20Suas.Info!"
+                  target="_blank"
+                  className="flex justify-center items-center gap-2"
+                >
+                  Ir para o Whatsapp
+                  <img
+                    src={WhatsApp_icon}
+                    alt="WhatsApp Icon"
+                    width={24}
+                    height={24}
+                  />
+                </a>
+              </Button>
+            </div>
           </form>
-        </DialogContent>
-      </Dialog>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default HeaderButton;
+export default Contact;

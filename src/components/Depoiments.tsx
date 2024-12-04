@@ -1,3 +1,5 @@
+import aspas from "../assets/aspas.png?url";
+
 const DepoimentsList = [
   {
     name: "Jéssica Veterinário",
@@ -26,14 +28,19 @@ const DepoimentsList = [
 const Depoiments = () => {
   return (
     <div className="bg-gray-400 py-10">
-      <div className="container w-3/4 m-auto space-y-6">
+      <div className="container w-full m-auto space-y-6">
         <h2 className="text-5xl font-medium text-[#333333]">
           Depoimentos de quem confia no nosso trabalho
         </h2>
         {DepoimentsList.map((depoiment, index) => (
-          <div className="bg-white px-20 pt-10 pb-5 rounded-md" key={index}>
-            <p className="italic">{depoiment.text}</p>
-            <div className="flex justify-between items-end mt-5">
+          <div className="bg-white px-7 pt-10 pb-5 rounded-md" key={index}>
+            <div className="flex justify-normal items-start gap-5">
+              <div className="w-16">
+                <img src={aspas} alt="aspas" className="p-1 -mt-5" />
+              </div>
+              <p className="italic w-full">{depoiment.text}</p>
+            </div>
+            <div className="flex justify-between items-end mt-5 pl-10">
               <div className="flex gap-7 items-center">
                 <img
                   src={depoiment.img}
@@ -41,9 +48,9 @@ const Depoiments = () => {
                   className="w-14 h-14 rounded-full"
                 />
                 <div>
-                  <h3 className="font-bold">{depoiment.name}</h3>
-                  <p>{depoiment.role}</p>
-                  <p>{depoiment.city}</p>
+                  <h3 className="font-bold text-sm">{depoiment.name}</h3>
+                  <p className="text-sm">{depoiment.role}</p>
+                  <p className="text-sm">{depoiment.city}</p>
                 </div>
               </div>
 
