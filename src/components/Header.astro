@@ -8,17 +8,20 @@ import suas_info from "../assets/suas_info.png?url";
 
   <div class="links flex items-center gap-16">
     <ul class="flex items-center justify-around gap-20">
-      <li><a href="">Home</a></li>
-      <li><a href="">Soluções</a></li>
-      <li><a href="">Municípios</a></li>
-      <li><a href="">Sobre</a></li>
-      <li><a href="">Contato</a></li>
+      <li><a href="#banner" id="banner">Home</a></li>
+      <li><a href="#solucoes" id="info">Soluções</a></li>
+      <li><a href="#parceiros" id="partners2">Municípios</a></li>
+      <li><a href="#sobre" id="vfsoft">Sobre</a></li>
+      <li><a href="#contato" id="contact">Contato</a></li>
     </ul>
     <HeaderButton title="VAMOS CONVERSAR" client:only />
   </div>
 </header>
 
 <style>
+  html {
+    scroll-behavior: smooth;
+  }
   li {
     padding: 1px 16px;
     border-radius: 5px;

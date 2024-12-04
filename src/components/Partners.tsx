@@ -36,7 +36,7 @@ const PartnersList = [
 
 const Partners = () => {
   return (
-    <div className="py-10 grid gap-5">
+    <section id="parceiros" className="py-10 grid gap-5">
       <h2 className="text-5xl text-[#0f3060] flex items-center gap-3 font-bold pl-16 py-2">
         Municípios que confiam no{" "}
         <img src={suas_info} alt="logo do suas info" />
@@ -71,7 +71,7 @@ const Partners = () => {
           <CarouselNext />
         </Carousel>
       </div>
-    </div>
+    </section>
   );
 };
 

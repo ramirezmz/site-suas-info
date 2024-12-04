@@ -3,12 +3,12 @@ import Banner from "@/components/Banner.astro";
 import Info from "@/components/Info.astro";
 import Layout from "../layouts/Layout.astro";
 import ReasonsWhy from "@/components/ReasonsWhy.tsx";
-import Depoiments from "@/components/Depoiments.tsx";
 import "@/styles/globals.css";
 import Cities from "@/components/Cities";
 import Partners from "@/components/Partners";
 import VfSoft from "@/components/VfSoft.astro";
 import Contact from "@/components/Contact";
+import Depoiments from "@/components/Depoiments.astro";
 ---
 
 <Layout>
@@ -17,7 +17,7 @@ import Contact from "@/components/Contact";
   <Info />
   <ReasonsWhy client:only />
   <Partners client:only />
-  <Depoiments client:only />
+  <Depoiments />
   <VfSoft />
   <Contact />
 </Layout>

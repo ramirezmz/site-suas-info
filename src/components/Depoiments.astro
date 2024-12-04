@@ -1,3 +1,4 @@
+---
 import aspas from "../assets/aspas.png?url";
 
 const DepoimentsList = [
@@ -25,46 +26,44 @@ const DepoimentsList = [
     img: "https://horario.com.br/wp-content/uploads/2022/11/geha_blog-21-11.jpg",
   },
 ];
-const Depoiments = () => {
-  return (
-    <div className="bg-gray-400 py-10">
-      <div className="container w-full m-auto space-y-6">
-        <h2 className="text-5xl font-medium text-[#333333]">
-          Depoimentos de quem confia no nosso trabalho
-        </h2>
-        {DepoimentsList.map((depoiment, index) => (
-          <div className="bg-white px-7 pt-10 pb-5 rounded-md" key={index}>
-            <div className="flex justify-normal items-start gap-5">
-              <div className="w-16">
-                <img src={aspas} alt="aspas" className="p-1 -mt-5" />
-              </div>
-              <p className="italic w-full">{depoiment.text}</p>
-            </div>
-            <div className="flex justify-between items-end mt-5 pl-10">
-              <div className="flex gap-7 items-center">
-                <img
-                  src={depoiment.img}
-                  alt=""
-                  className="w-14 h-14 rounded-full"
-                />
-                <div>
-                  <h3 className="font-bold text-sm">{depoiment.name}</h3>
-                  <p className="text-sm">{depoiment.role}</p>
-                  <p className="text-sm">{depoiment.city}</p>
-                </div>
-              </div>
+---
 
-              <img
-                src="https://static.vecteezy.com/system/resources/previews/013/743/771/non_2x/five-stars-rating-icon-png.png"
-                alt=""
-                className="w-auto h-10"
-              />
+<section id="depoimentos" class="bg-gray-400 py-10">
+    <div class="container w-full m-auto space-y-6">
+      <h2 class="text-5xl font-medium text-[#333333]">
+        Depoimentos de quem confia no nosso trabalho
+      </h2>
+      {DepoimentsList.map((depoiment) => (
+        <div
+          class="depoimentos bg-white px-7 pt-10 pb-5 rounded-md"
+        >
+          <div class="flex justify-normal items-start gap-5">
+            <div class="w-16">
+              <img src={aspas} alt="aspas" class="p-1 -mt-5" />
             </div>
+            <p class="italic w-full">{depoiment.text}</p>
           </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+          <div class="flex justify-between items-end mt-5 pl-10">
+            <div class="flex gap-7 items-center">
+              <img
+                src={depoiment.img}
+                alt=""
+                class="w-14 h-14 rounded-full"
+              />
+              <div>
+                <h3 class="font-bold text-sm">{depoiment.name}</h3>
+                <p class="text-sm">{depoiment.role}</p>
+                <p class="text-sm">{depoiment.city}</p>
+              </div>
+            </div>
 
-export default Depoiments;
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/013/743/771/non_2x/five-stars-rating-icon-png.png"
+              alt=""
+              class="w-auto h-10"
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+</section>

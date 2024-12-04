@@ -5,7 +5,7 @@ import img1 from '../assets/img1.png?url'
 import img2 from '../assets/img2.png?url'
 import img3 from '../assets/img3.png?url'
 ---
-<div class="px-16 py-10">
+<section id="sobre" class="px-16 py-10">
     <h2 class="flex items-center justify-center gap-3 text-5xl text-[#17427b] font-semibold">Inovação e Excelência: A História por Trás do <img src={suas_info} /></h2>
     <div class="flex border-b-4 border-b-[#17427b] h-full py-5">
         <div class="images sm:mr-28 grid gap-3">
@@ -36,21 +36,4 @@ import img3 from '../assets/img3.png?url'
                 </div>
         </div>
     </div>
-</div>
-
-<style>
-    @keyframes slideIn {
-      from {
-        transform: translateX(-100%);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-  
-    .images img {
-      animation: slideIn 1s ease-in-out;
-    }
-  </style>
+</section>

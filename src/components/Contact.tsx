@@ -43,7 +43,7 @@ const Contact = () => {
     }
   };
   return (
-    <div className="flex justify-between px-20 pt-6 pb-10">
+    <section id="contato" className="flex justify-between px-20 pt-6 pb-10">
       <div className="images flex flex-col w-1/2 justify-center gap-5">
         <h2 className="text-3xl mb-5">Entre em Contato</h2>
         <div className="flex flex-col justify-center items-center">
@@ -135,7 +135,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
