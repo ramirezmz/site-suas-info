@@ -121,7 +121,7 @@ const Contact = () => {
 
               <Button type="button" className="w-full mt-2" variant={"outline"}>
                 <a
-                  href="https://wa.me/41998238165?text=Olá!%20Quero%20agendar%20uma%20demonstração%20do%20Suas.Info!"
+                  href="https://wa.me/22998052982?text=Olá!%20Quero%20agendar%20uma%20demonstração%20do%20Suas.Info!"
                   target="_blank"
                   className="flex justify-center items-center gap-2"
                 >
