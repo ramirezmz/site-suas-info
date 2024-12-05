@@ -1,15 +1,21 @@
 ---
 import HeaderButton from "./HeaderButton.tsx";
 import suas_info from "../assets/suas_info.png?url";
-import { XIcon } from "lucide-react";
+import { XIcon, MenuIcon } from "lucide-react";
 
 function closeMenu() {
-  const menu = document.querySelector('.menu')?.classList.remove('active');
+  const menu = document.querySelector(".menu")?.classList.remove("active");
 }
 ---
 
-<header class="container flex justify-between py-10 items-center w-full mx-auto">
-  <img src={suas_info} alt="Logo do Suas Info" class="border-b border-black" />
+<header
+  class="container flex justify-between py-10 items-center w-full mx-auto"
+>
+  <img
+    src={suas_info}
+    alt="Logo do Suas Info"
+    class="border-b border-black pl-4"
+  />
 
   <nav class="links flex items-center gap-16 desktop">
     <ul class="flex items-center justify-around gap-20">
@@ -23,9 +29,16 @@ function closeMenu() {
       </li>
     </ul>
   </nav>
-  <button class="hamburger" onclick="toggleMenu()">☰</button>
-  <nav class="menu absolute bg-white/90 top-0 w-screen h-screen flex justify-center">
-    <XIcon className="close absolute top-10 right-5 font-extrabold" onClick={closeMenu} />
+  <button class="hamburger pr-4" onclick="toggleMenu()">
+    <MenuIcon className="w-7 h-7" />
+  </button>
+  <nav
+    class="menu absolute bg-white/90 top-0 w-screen h-screen flex justify-center"
+  >
+    <XIcon
+      className="close absolute top-10 right-5 font-extrabold"
+      onClick={closeMenu}
+    />
     <ul class="flex flex-col items-center justify-center gap-20 p-10">
       <li><a href="#banner" id="banner">Home</a></li>
       <li><a href="#solucoes" id="info">Soluções</a></li>
@@ -56,10 +69,8 @@ function closeMenu() {
   }
   .hamburger {
     display: none;
-    font-size: 24px;
     background: none;
     border: none;
-    cursor: pointer;
   }
   .menu {
     display: none;
@@ -94,19 +105,19 @@ function closeMenu() {
 
 <script>
   function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu?.classList.toggle('active');
+    const menu = document.querySelector(".menu");
+    menu?.classList.toggle("active");
   }
 
   function closeMenu() {
-    const menu = document.querySelector('.menu');
-    menu?.classList.remove('active');
+    const menu = document.querySelector(".menu");
+    menu?.classList.remove("active");
   }
 
-  document.querySelector('.hamburger')?.addEventListener('click', toggleMenu);
-  document.querySelector('.close')?.addEventListener('click', closeMenu);
+  document.querySelector(".hamburger")?.addEventListener("click", toggleMenu);
+  document.querySelector(".close")?.addEventListener("click", closeMenu);
 
-  document.querySelectorAll('.menu a').forEach(link => {
-    link.addEventListener('click', closeMenu);
+  document.querySelectorAll(".menu a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
   });
 </script>

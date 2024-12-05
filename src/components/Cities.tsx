@@ -33,6 +33,7 @@ const Cities = () => {
         <Carousel
           opts={{
             align: "center",
+            loop: true,
           }}
           className="w-full max-w-[270px] md:max-w-screen-xl"
         >

@@ -46,6 +46,7 @@ const Partners = () => {
         <Carousel
           opts={{
             align: "center",
+            loop: true,
           }}
           className="w-full md:max-w-screen-xl max-w-[280px]"
         >

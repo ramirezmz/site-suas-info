@@ -40,7 +40,7 @@ const Reasons = [
 
 const ReasonsWhy = () => {
   return (
-    <section id="reasons" className="container w-full mx-auto grid gap-5">
+    <section id="reasons" className="container w-full mx-auto grid gap-5 px-4">
       <h2 className="text-2xl md:text-5xl font-bold py-5 text-[#3b3a3a] flex items-center gap-3 justify-center">
         Por que escolher o{" "}
         <img src={suas_info} alt="Logo do Suas Info" width={100} height={100} />{" "}
