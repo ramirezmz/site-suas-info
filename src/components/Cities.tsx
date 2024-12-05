@@ -29,31 +29,28 @@ const Cities = () => {
         Municípios com quem cocriamos
       </h2>
 
-      <div className="w-full flex justify-center">
-        <Carousel
-          opts={{
-            align: "center",
-            loop: true,
-          }}
-          className="w-full max-w-[270px] md:max-w-screen-xl"
-        >
-          <CarouselContent>
-            {CitiesList.map((city, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1 flex justify-center">
-                  <img
-                    src={city.img}
-                    alt="logo do município"
-                    className="max-h-36"
-                  />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
+      <Carousel
+        opts={{
+          align: "center",
+        }}
+        className="w-[65vw] md:max-w-screen-xl md:w-[75vw] m-auto"
+      >
+        <CarouselContent className="flex items-center">
+          {CitiesList.map((city, index) => (
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <div className="p-1 flex justify-center">
+                <img
+                  src={city.img}
+                  alt="logo do município"
+                  className="max-h-36"
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext className="-mt-4 mr-5" />
+      </Carousel>
     </section>
   );
 };

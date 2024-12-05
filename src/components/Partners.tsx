@@ -37,9 +37,16 @@ const PartnersList = [
 const Partners = () => {
   return (
     <section id="parceiros" className="py-10 grid gap-5">
-      <h2 className="text-2xl sm:text-5xl text-[#0f3060] flex items-center gap-3 font-bold pl-16 py-2">
-        Municípios que confiam no{" "}
-        <img src={suas_info} alt="logo do suas info" />
+      <h2 className="text-2xl md:text-3xl lg:text-5xl text-[#0f3060] flex items-center justify-center gap-3 font-bold px-2 md:pl-16 py-2">
+        <span className="flex flex-col md:flex-row text-nowrap md:gap-3">
+          Municípios que confiam no{" "}
+          <img
+            src={suas_info}
+            alt="logo do suas info"
+            width={100}
+            className="m-auto lg:w-auto lg:h-auto"
+          />
+        </span>
       </h2>
 
       <div className="w-full flex justify-center">
@@ -48,28 +55,26 @@ const Partners = () => {
             align: "center",
             loop: true,
           }}
-          className="w-full md:max-w-screen-xl max-w-[280px]"
+          className="w-[65vw] md:max-w-screen-xl md:w-[75vw] m-auto"
         >
-          <CarouselContent>
+          <CarouselContent className="flex items-center">
             {PartnersList.map((partner, index) => (
               <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
-                <div className="p-1">
-                  <div className="flex flex-col items-center justify-center p-6 sm:aspect-square gap-10 border-none">
-                    <img
-                      src={partner.img}
-                      alt="logo do município"
-                      className="max-h-36"
-                    />
-                    <span className="italic text-lg font-medium">
-                      desde {partner.since}
-                    </span>
-                  </div>
+                <div className="flex flex-col items-center justify-center p-6 aspect-square gap-10 border-none">
+                  <img
+                    src={partner.img}
+                    alt="logo do município"
+                    className="max-w-36"
+                  />
+                  <span className="italic text-lg font-medium">
+                    desde {partner.since}
+                  </span>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
           <CarouselPrevious />
-          <CarouselNext />
+          <CarouselNext className="-mt-4 mr-5" />
         </Carousel>
       </div>
     </section>
