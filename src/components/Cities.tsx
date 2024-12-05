@@ -24,7 +24,7 @@ const CitiesList = [
 const Cities = () => {
   return (
     <section id="partners1" className="grid mt-10 mb-20">
-      <h2 className="text-2xl text-[#3b3a3a] grid items-center gap-3 pl-16 pb-5">
+      <h2 className="text-2xl text-[#3b3a3a] grid items-center gap-3 pl-5 md:pl-16 pb-5">
         <span className="border border-black w-44"></span>
         Municípios com quem cocriamos
       </h2>
@@ -34,15 +34,12 @@ const Cities = () => {
           opts={{
             align: "center",
           }}
-          className="w-full max-w-screen-xl"
+          className="w-full max-w-[270px] md:max-w-screen-xl"
         >
           <CarouselContent>
             {CitiesList.map((city, index) => (
-              <CarouselItem
-                key={index}
-                className="md:basis-1/2 lg:basis-1/3 basis-1"
-              >
-                <div className="p-1">
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1 flex justify-center">
                   <img
                     src={city.img}
                     alt="logo do município"

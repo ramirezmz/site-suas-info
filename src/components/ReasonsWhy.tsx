@@ -41,11 +41,12 @@ const Reasons = [
 const ReasonsWhy = () => {
   return (
     <section id="reasons" className="container w-full mx-auto grid gap-5">
-      <h2 className="text-5xl font-bold py-5 text-[#3b3a3a] flex items-center gap-3 justify-center">
-        Por que escolher o <img src={suas_info} alt="Logo do Suas Info" /> para
-        sua gestão?
+      <h2 className="text-2xl md:text-5xl font-bold py-5 text-[#3b3a3a] flex items-center gap-3 justify-center">
+        Por que escolher o{" "}
+        <img src={suas_info} alt="Logo do Suas Info" width={100} height={100} />{" "}
+        para sua gestão?
       </h2>
-      <div className="flex w-full justify-around m-auto">
+      <div className="flex flex-col sm:flex-row w-full justify-around m-auto">
         {Reasons.map((reason, index) => (
           <div
             key={index}

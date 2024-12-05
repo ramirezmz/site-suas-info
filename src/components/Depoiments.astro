@@ -29,16 +29,16 @@ const DepoimentsList = [
 ---
 
 <section id="depoimentos" class="bg-gray-400 py-10">
-    <div class="container w-full m-auto space-y-6">
-      <h2 class="text-5xl font-medium text-[#333333]">
+    <div class="container w-full m-auto space-y-6 p-2 sm:p-0">
+      <h2 class="text-3xl sm:text-5xl font-medium text-[#333333]">
         Depoimentos de quem confia no nosso trabalho
       </h2>
       {DepoimentsList.map((depoiment) => (
         <div
-          class="depoimentos bg-white px-7 pt-10 pb-5 rounded-md"
+          class="depoimentos bg-white px-2 sm:px-7 pt-10 pb-5 rounded-md"
         >
           <div class="flex justify-normal items-start gap-5">
-            <div class="w-16">
+            <div class="w-10 sm:w-16">
               <img src={aspas} alt="aspas" class="p-1 -mt-5" />
             </div>
             <p class="italic w-full">{depoiment.text}</p>

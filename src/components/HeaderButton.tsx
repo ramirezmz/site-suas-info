@@ -58,7 +58,7 @@ const HeaderButton = ({ title }: HeaderButtonProps) => {
         <DialogTrigger asChild>
           <Button
             variant={"secondary"}
-            className="flex items-center max-h-10 text-nowrap gap-1"
+            className="flex items-center max-h-10 text-nowrap gap-1 w-full"
           >
             <span>{title}</span>
             <ArrowRight size={32} />

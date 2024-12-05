@@ -37,7 +37,7 @@ const PartnersList = [
 const Partners = () => {
   return (
     <section id="parceiros" className="py-10 grid gap-5">
-      <h2 className="text-5xl text-[#0f3060] flex items-center gap-3 font-bold pl-16 py-2">
+      <h2 className="text-2xl sm:text-5xl text-[#0f3060] flex items-center gap-3 font-bold pl-16 py-2">
         Municípios que confiam no{" "}
         <img src={suas_info} alt="logo do suas info" />
       </h2>
@@ -47,13 +47,13 @@ const Partners = () => {
           opts={{
             align: "center",
           }}
-          className="w-full max-w-screen-xl"
+          className="w-full md:max-w-screen-xl max-w-[280px]"
         >
           <CarouselContent>
             {PartnersList.map((partner, index) => (
               <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
                 <div className="p-1">
-                  <div className="flex flex-col items-center justify-center p-6 aspect-square gap-10 border-none">
+                  <div className="flex flex-col items-center justify-center p-6 sm:aspect-square gap-10 border-none">
                     <img
                       src={partner.img}
                       alt="logo do município"

@@ -43,8 +43,11 @@ const Contact = () => {
     }
   };
   return (
-    <section id="contato" className="flex justify-between px-20 pt-6 pb-10">
-      <div className="images flex flex-col w-1/2 justify-center gap-5">
+    <section
+      id="contato"
+      className="flex justify-between px-10 md:px-20 pt-6 pb-10 flex-col md:flex-row gap-5 md:gap-0"
+    >
+      <div className="images flex flex-col md:w-1/2 justify-center gap-5">
         <h2 className="text-3xl mb-5">Entre em Contato</h2>
         <div className="flex flex-col justify-center items-center">
           <img src={suas_info} alt="" className="w-96" />
@@ -65,7 +68,7 @@ const Contact = () => {
           </span>
         </div>
       </div>
-      <div className="form  w-1/2">
+      <div className="form md:w-1/2">
         <div className="bg-[#c5c6d2] max-w-lg m-auto p-10 rounded-md grid gap-5">
           <p className="text-xl font-bold">Solicite o nosso contato</p>
           <form
